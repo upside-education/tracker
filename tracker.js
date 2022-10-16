@@ -1,10 +1,6 @@
 let mouseData = [];
 let isInactiveData = [];
 
-let user = localStorage.getItem("upside-user")
-  ? localStorage.getItem("upside-user")
-  : "";
-
 let currentPosition = {
   x: 0,
   y: 0,
@@ -50,6 +46,10 @@ setInterval(() => {
 }, 1000);
 
 setInterval(() => {
+  let user = localStorage.getItem("upside-user")
+    ? localStorage.getItem("upside-user")
+    : "";
+
   fetch("http://localhost:5000/data", {
     method: "POST",
     headers: {
