@@ -23,7 +23,7 @@ document.addEventListener("visibilitychange", () => {
     isInactive.duration =
       (new Date(isInactive.activatedTime) - new Date(isInactive.stoppedTime)) /
       1000;
-    isInactiveData.push(isInactive);
+    isInactiveData.push(Object.assign({}, isInactive));
   }
 });
 
