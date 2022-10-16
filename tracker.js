@@ -24,7 +24,6 @@ let isInactive = {
 
 document.addEventListener("visibilitychange", () => {
   const now = new Date();
-  console.log(now);
   if (document.hidden) {
     isInactive.stoppedTime = now.toISOString();
   } else {
