@@ -1,8 +1,13 @@
 let mouseData = [];
 let isInactiveData = [];
 
-let apiKey = localStorage.getItem("upsideApiKey");
-let user = localStorage.getItem("upsideUser");
+let apiKey = localStorage.getItem("upsideApiKey")
+  ? localStorage.getItem("upsideApiKey")
+  : "";
+
+let user = localStorage.getItem("upsideUser")
+  ? localStorage.getItem("upsideUser")
+  : "";
 
 let currentPosition = {
   x: 0,
